@@ -53,16 +53,16 @@
                 <p>Качаем <a href="http://www.ollydbg.de/odbg110.zip">OllyDbg 1.10</a> и распаковываем.</p>
                 <img class="shot" src="img/olly_dbg_01.jpg">
 
-                <p>Запускаем <b>OLLYDBG</b> и выбираем <b>File->Open</b></p>
+                <p>Запускаем <i>OLLYDBG</i> и выбираем <i>File->Open</i></p>
                 <img class="shot" src="img/olly_dbg_02.jpg">
 
-                <p>Открываем <b>C:\Windows\NOTEPAD.exe</b></p>
+                <p>Открываем <i>C:\Windows\NOTEPAD.exe</i></p>
                 <img class="shot" src="img/olly_dbg_03.jpg">
 
-                <p>После этого можно жамкнуть пробел и вбивать инструкции</p>
+                <p>После этого нужно жамкнуть <b>пробел</b> чтобы вбивать инструкции</p>
                 <img class="shot" src="img/olly_dbg_04.jpg">
 
-                <p>Как только вы ввели всё что нужно закрываем окошко и жамкаем F8 чтобы исполнить одну инструкцию.</p>
+                <p>Как только вы ввели всё что нужно закрываем окошко и жамкаем <b>F8</b> чтобы исполнить одну инструкцию.</p>
                 <img class="shot" src="img/olly_dbg_05.jpg">
 
                 <div class="gap">
@@ -81,10 +81,10 @@
                 <p>Создаём проект, и добавляем .cpp/.c файл как будто вы хотите писать на C++/C. Теперь можно писать на ассемблере следующим образом.</p>
                 <img class="shot" src="img/visual_cpp_02.jpg">
 
-                <p>Ставим брейкпоинт на начале ассемблерного кода и жамкаем F5</p>
+                <p>Ставим брейкпоинт на начале ассемблерного кода и жамкаем <b>F5</b></p>
                 <img class="shot" src="img/visual_cpp_03.jpg">
 
-                <p>Исполнять инструкции по одной можно жамкая F11 (у меня так). При этом внизу в окошке "Autos" можно видеть изменения, происходящие с регистрами и переменными.</p>
+                <p>Исполнять инструкции по одной можно жамкая <b>F11</b> (у меня так). При этом внизу в окошке "Autos" можно видеть изменения, происходящие с регистрами и переменными.</p>
                 <img class="shot" src="img/visual_cpp_04.jpg">
 
 
@@ -98,6 +98,26 @@
                     <h4>Смотрим что делают отдельные инструкции под Dosbox</h4>
                     <br/>
                 </div>
+                <p>Качаем и ставим <a href="http://www.dosbox.com/download.php?main=1">Dosbox</a>. Качаем <a href="https://ld86.org/asm/14/DOS.zip">DOS.zip</a> и распаковываем его в <i>C:\DOS\</i> (если вы на Windows) или в <i>~/DOS</i> (если вы на Linux или Mac OS). В итоге у вас должен получиться следующий путь до файлов внутри архива -- <i>C:\DOS\DOS\NC\NC.bat</i> или <i>~/DOS/DOS/NC/NC.bat</i> . Запускаем Dosbox.</p>
+                <img class="shot" src="img/dosbox_01.jpg">
+
+                <p>Монтируем внешнюю директорию в Dosbox.</p>
+                <p><i>mount C: C:\DOS</i> либо <i>mount C: ~/DOS</i></p>
+                <p>Затем переходим на диск <i>C:</i> с помощью команды <i>C:</i></p>
+                <img class="shot" src="img/dosbox_02.jpg">
+
+                <p>Запускаем в Dosbox <i>DOS\NC\nc.bat</i></p>
+                <img class="shot" src="img/dosbox_03.jpg">
+
+                <p>Запускаем в Dosbox <i>td</i></p>
+                <img class="shot" src="img/dosbox_04.jpg">
+
+                <p>Жамкаем <b>Enter</b> чтобы закрыть приветствие. Затем жамкаем <b>пробел</b> и набираем нужные инструкции. К сожалению Turbo Debugger написан под 16-битную архитектуру и не понимаем 32-битных регистров (E<i>XX</i>). Но думаю этого достаточно чтобы попробовать большинство нужных нам инструкций.</p>
+                <img class="shot" src="img/dosbox_05.jpg">
+
+                <p>Как только вы ввели всё что нужно жамкаем <b>F8</b> чтобы исполнять по одной инструкции.</p>
+                <img class="shot" src="img/dosbox_06.jpg">
+
                 <div class="gap">
                 </div>
             </div>
