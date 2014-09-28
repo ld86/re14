@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Reverse Engineering &amp; Binary Vulnerabilities</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/site.css">
+    </head>
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="index.html">Home</a>
+                    <a class="blog-nav-item" href="tools.html">Инструменты</a>
+                    <a class="blog-nav-item active" href="resources.html">Материалы</a>
+                    <a class="blog-nav-item" href="ratings.html">Таблица результатов</a>
+                    <a class="blog-nav-item" href="contacts.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="welcome-message">
+                <h3>Введение в ассемблер. Основные инструкции. Ветвления.</h3>
+                <br/>
+                <a href="resources/intro_to_asm_p1.pdf"><h3>Слайды</h3></a>
+                <br/>
+            </div>
+                <ul>
+                    <li><a href="#try_on_windows">Как посмотреть что делают отдельные инструкции под Windows</a></li>
+                    <li><a href="#write_on_windows">Как писать на ассемблере под Windows</a></li>
+                </ul>
+            <a name="try_on_windows"></a>
+            <div class="slides">
+                <div class="welcome-message">
+                    <h4>Как посмотреть что делают отдельные инструкции под Windows</h4>
+                    <br/>
+                </div>
+
+                <p>Качаем <a href="http://www.ollydbg.de/odbg110.zip">OllyDbg 1.10</a> и распаковываем.</p>
+                <img class="shot" src="img/olly_dbg_01.jpg">
+
+                <p>Запускаем <b>OLLYDBG</b> и выбираем <b>File->Open</b></p>
+                <img class="shot" src="img/olly_dbg_02.jpg">
+
+                <p>Открываем <b>C:\Windows\NOTEPAD.exe</b></p>
+                <img class="shot" src="img/olly_dbg_03.jpg">
+
+                <p>После этого можно жамкнуть пробел и вбивать инструкции</p>
+                <img class="shot" src="img/olly_dbg_04.jpg">
+
+                <p>Как только вы ввели всё что нужно закрываем окошко и жамкаем F8 чтобы исполнить одну инструкцию.</p>
+                <img class="shot" src="img/olly_dbg_05.jpg">
+
+                <div class="gap">
+                </div>
+            </div>
+            <a name="write_on_windows"></a>
+            <div class="slides">
+                <div class="welcome-message">
+                    <h4>Как писать на ассемблере под Windows</h4>
+                    <br/>
+                </div>
+
+                <p>Качаем и ставим <a href="go.microsoft.com/?linkid=7729279">Visual C++ 2008 Express Edition</a></p>
+                <img class="shot" src="img/visual_cpp_01.jpg">
+
+                <p>Создаём проект, и добавляем .cpp/.c файл как будто вы хотите писать на C++/C. Теперь можно писать на ассемблере следующим образом.</p>
+                <img class="shot" src="img/visual_cpp_02.jpg">
+
+                <p>Ставим брейкпоинт на начале ассемблерного кода и жамкаем F5</p>
+                <img class="shot" src="img/visual_cpp_03.jpg">
+
+                <p>Исполнять инструкции по одной можно жамкая F11 (у меня так). При этом внизу в окошке "Autos" можно видеть изменения, происходящие с регистрами и переменными.</p>
+                <img class="shot" src="img/visual_cpp_04.jpg">
+
+
+                <div class="gap">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="footer-text">
+                    Brought you to by krait, crassirostris &amp; ld86
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-53635529-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+    </body>
+</html>
