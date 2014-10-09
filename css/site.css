@@ -5,6 +5,10 @@
     border: solid 1px black;
 }
 
+.blackrow td { 
+    background: #ccc;
+}
+
 .shot {
     border: 1px solid black;
 }
