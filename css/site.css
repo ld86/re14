@@ -5,6 +5,13 @@
     border: solid 1px black;
 }
 
+.scoreboard th {
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border: solid 1px black;
+}
+
 .blackrow td { 
     background: #ccc;
 }
