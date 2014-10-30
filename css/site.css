@@ -1,3 +1,7 @@
+.scoreboard-container {
+    width: 100%;
+}
+
 .scoreboard {
     font-size: 75%;
     margin: auto;
