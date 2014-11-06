@@ -1,4 +1,10 @@
+.scoreboard-container {
+    width: 100%;
+    overflow: overlay;
+}
+
 .scoreboard {
+    font-size: 90%;
     margin: auto;
 }
 
