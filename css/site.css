@@ -1,3 +1,15 @@
+.taskname-th:hover .taskname {
+    display: block;
+}
+
+.taskname-th:hover .stub {
+    display: none;
+}
+
+.taskname {
+    display: none;
+}
+
 .scoreboard-container {
     width: 100%;
     overflow: overlay;
